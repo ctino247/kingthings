@@ -17,5 +17,8 @@ define('FROM_EMAIL', 'noreply@yourdomain.com');
 define('FROM_NAME', 'Landing Page Generator');
 
 // Base URL
-define('BASE_URL', "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . "/");
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$script_dir = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+define('BASE_URL', $protocol . $host . $script_dir . "/");
 ?>

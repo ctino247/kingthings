@@ -4,8 +4,8 @@ require_once 'db.php';
 if (isset($_POST['submit'])) {
     // Basic Validation
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $title = htmlspecialchars($_POST['title']);
-    $description = htmlspecialchars($_POST['description']);
+    $title = $_POST['title'];
+    $description = $_POST['description'];
     $contact_link = filter_var($_POST['contact_link'], FILTER_SANITIZE_URL);
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

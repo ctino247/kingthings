@@ -13,7 +13,8 @@ This platform allows users to instantly create high-converting landing pages aft
     *   Open `config.php`.
     *   Update the database credentials.
     *   Sign up for a Paystack account at [https://paystack.com](https://paystack.com) and get your **Secret Key**. Update `PAYSTACK_SECRET_KEY` in `config.php`.
-    *   Configure your SMTP/Email settings in `config.php` for automated email delivery.
+    *   Configure your SMTP/Email settings in `config.php`.
+    *   **Note on Email:** The system uses the built-in PHP `mail()` function for simplicity. If your hosting requires SMTP authentication, you may need to integrate a library like PHPMailer using the settings provided in `config.php`.
 
 3.  **File Permissions:**
     *   Ensure the `uploads/` directory is writable by the web server.
